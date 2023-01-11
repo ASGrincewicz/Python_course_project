@@ -1,16 +1,25 @@
-# This is a sample Python script.
+import roomSetup
+from inventory import inventory
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+requested_item = int(input('Please enter the index of the item you would like:\n'))
+requested_item2 = int(input('Please enter the index of the 2nd item you would like:\n'))
+
+carried_items = []
+
+if 0 <= requested_item < len(inventory):
+    # print(inventory[requested_item])
+    carried_items.append(inventory[requested_item])
+else:
+    print('No item found.')
+
+if 0 <= requested_item2 < len(inventory):
+    # print(inventory[requested_item2])
+    carried_items.append(inventory[requested_item2])
+else:
+    print('No item found.')
+
+print('You have received:')
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+for x in carried_items:
+    print('{}'.format(x))
