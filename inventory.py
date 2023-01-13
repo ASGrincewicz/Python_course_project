@@ -1,5 +1,5 @@
 # List of items that must be collected to finish game.
-from item import Item, Ovilus, SLScamera
+from item import Item,DigitalRecorder, Ovilus, SLScamera
 
 # Items: Ovilus, Digital Recorder, SLS Camera, Spirit-Box, Night Vision Camera, EMF Detector, REM-POD
 
@@ -7,7 +7,7 @@ from item import Item, Ovilus, SLScamera
 # 'Spirit-Box']
 
 
-digital_recorder = Item('Digital Recorder')
+digital_recorder = DigitalRecorder('Digital Recorder')
 emf_detector = Item('EMF Detector')
 night_vision = Item('Night Vision Camera')
 ovilus = Ovilus('Ovilus')
