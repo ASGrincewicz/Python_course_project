@@ -44,12 +44,16 @@ while user_action != 'end':
 
         if user_movement == 'north' and current_room.north.lower() != 'none':
             print(f'You are in the {current_room.north}')
+            current_room = roomSetup.get_room(current_room.north.lower())
         elif user_movement == 'south' and current_room.south.lower() != 'none':
             print(f'You are in the {current_room.south}')
+            current_room = roomSetup.get_room(current_room.south.lower())
         elif user_movement == 'east' and current_room.east.lower() != 'none':
             print(f'You are in the {current_room.east}')
+            current_room = roomSetup.get_room(current_room.east.lower())
         elif user_movement == 'west' and current_room.west.lower() != 'none':
             print(f'You are in the {current_room.west}')
+            current_room = roomSetup.get_room(current_room.west.lower())
         else:
             print('Invalid direction.')
 else:
